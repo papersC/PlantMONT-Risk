@@ -1,0 +1,116 @@
+== Paired differences (mean, 95% half-width, p-value)
+default {} RISK - ERA : ev_ontime +0.1130 +- 0.0217 (p=1.5e-11) | p95 +0.0742 +- 0.1500 (p=0.32) | cvar -0.2619 +- 0.0552 (p=1.3e-10) | e_comm -0.0081 +- 0.0040 (p=0.00026)
+default {} RISK - ETEV : ev_ontime +0.0009 +- 0.0013 (p=0.16) | p95 -0.1153 +- 0.0980 (p=0.023) | cvar -0.0020 +- 0.0029 (p=0.16) | e_comm +0.0103 +- 0.0006 (p=1.9e-24)
+default {} RISK - RISK_NOM : ev_ontime +0.0082 +- 0.0059 (p=0.0084) | p95 -0.3986 +- 0.1249 (p=3.8e-07) | cvar -0.0190 +- 0.0133 (p=0.0068) | e_comm +0.0021 +- 0.0012 (p=0.0017)
+moist {'mbar': 0.2} RISK - RISK_NOM : ev_ontime +0.0323 +- 0.0184 (p=0.0012) | p95 -0.7341 +- 0.1674 (p=7.3e-10) | cvar -0.0780 +- 0.0477 (p=0.0023) | e_comm +0.0044 +- 0.0013 (p=1.7e-07)
+moist {'mbar': 0.8} RISK - ERA : ev_ontime +0.1419 +- 0.0171 (p=1.4e-16) | p95 -0.0191 +- 0.1434 (p=0.79) | cvar -0.3215 +- 0.0419 (p=1.1e-15) | e_comm -0.0225 +- 0.0028 (p=5.1e-16)
+harv {'h_mult': 0.25} RISK - ERA : ev_ontime +0.2535 +- 0.0254 (p=9e-19) | p95 +0.0168 +- 0.1630 (p=0.83) | cvar -0.5691 +- 0.0598 (p=3.4e-18) | e_comm -0.0226 +- 0.0025 (p=2e-17)
+load {'lam0': 0.48} RISK - ETEV : ev_ontime -0.0510 +- 0.0230 (p=9.1e-05) | p95 -0.1622 +- 0.0636 (p=1.4e-05) | cvar +0.3150 +- 0.1273 (p=2.1e-05) | e_comm +0.0135 +- 0.0010 (p=6.3e-23)
+stress {'stress': 'burst_rain'} RISK - ETEV : ev_ontime +0.0013 +- 0.0045 (p=0.56) | p95 -0.1905 +- 0.0924 (p=0.00022) | cvar -0.0044 +- 0.0148 (p=0.55) | e_comm +0.0105 +- 0.0006 (p=7.7e-25)
+stress {'stress': 'zero_harvest'} RISK - ETEV : ev_ontime -0.0334 +- 0.0221 (p=0.0043) | p95 -0.1597 +- 0.1064 (p=0.0046) | cvar +0.0744 +- 0.0465 (p=0.0027) | e_comm +0.0083 +- 0.0007 (p=1.5e-21)
+stress {'stress': 'sink_loss'} RISK - ETEV : ev_ontime +0.0089 +- 0.0059 (p=0.0043) | p95 -0.0458 +- 0.1017 (p=0.36) | cvar -0.0205 +- 0.0134 (p=0.004) | e_comm +0.0100 +- 0.0006 (p=1.1e-25)
+== Means per configuration
+default TDMA|{} ev_ontime=0.023 p95=2.192 cvar=1.064 e_comm=0.210 depl=0.106 routine=nan slack=nan rt_ms=nan
+default PAFS|{} ev_ontime=0.065 p95=2.757 cvar=1.058 e_comm=0.287 depl=0.208 routine=nan slack=nan rt_ms=nan
+default ERA|{} ev_ontime=0.880 p95=1.518 cvar=0.280 e_comm=0.070 depl=0.007 routine=0.000 slack=nan rt_ms=nan
+default EAMAC|{} ev_ontime=0.768 p95=3.476 cvar=0.511 e_comm=0.075 depl=0.000 routine=0.106 slack=nan rt_ms=nan
+default ETEV|{} ev_ontime=0.992 p95=1.708 cvar=0.020 e_comm=0.052 depl=0.000 routine=0.211 slack=0.280 rt_ms=8.878
+default RISK|{} ev_ontime=0.993 p95=1.593 cvar=0.018 e_comm=0.062 depl=0.000 routine=0.199 slack=0.164 rt_ms=9.040
+default RISK_NOM|{} ev_ontime=0.984 p95=1.991 cvar=0.037 e_comm=0.060 depl=0.000 routine=0.176 slack=0.125 rt_ms=9.314
+moist PAFS|{"mbar": 0.2} ev_ontime=0.077 p95=2.902 cvar=1.052 e_comm=0.287 depl=0.195 routine=nan slack=nan rt_ms=nan
+moist ERA|{"mbar": 0.2} ev_ontime=0.903 p95=1.244 cvar=0.227 e_comm=0.061 depl=0.005 routine=0.000 slack=nan rt_ms=nan
+moist EAMAC|{"mbar": 0.2} ev_ontime=0.952 p95=2.577 cvar=0.115 e_comm=0.070 depl=0.000 routine=0.148 slack=nan rt_ms=nan
+moist ETEV|{"mbar": 0.2} ev_ontime=0.992 p95=1.391 cvar=0.019 e_comm=0.073 depl=0.000 routine=0.363 slack=0.141 rt_ms=9.144
+moist RISK|{"mbar": 0.2} ev_ontime=0.993 p95=1.382 cvar=0.018 e_comm=0.079 depl=0.000 routine=0.348 slack=0.095 rt_ms=9.515
+moist RISK_NOM|{"mbar": 0.2} ev_ontime=0.960 p95=2.117 cvar=0.096 e_comm=0.075 depl=0.000 routine=0.300 slack=0.021 rt_ms=9.837
+moist PAFS|{"mbar": 0.35} ev_ontime=0.073 p95=3.065 cvar=1.052 e_comm=0.287 depl=0.204 routine=nan slack=nan rt_ms=nan
+moist ERA|{"mbar": 0.35} ev_ontime=0.888 p95=1.402 cvar=0.261 e_comm=0.067 depl=0.006 routine=0.000 slack=nan rt_ms=nan
+moist EAMAC|{"mbar": 0.35} ev_ontime=0.894 p95=3.135 cvar=0.246 e_comm=0.072 depl=0.000 routine=0.127 slack=nan rt_ms=nan
+moist ETEV|{"mbar": 0.35} ev_ontime=0.993 p95=1.655 cvar=0.018 e_comm=0.063 depl=0.000 routine=0.281 slack=0.234 rt_ms=9.286
+moist RISK|{"mbar": 0.35} ev_ontime=0.993 p95=1.451 cvar=0.017 e_comm=0.073 depl=0.000 routine=0.272 slack=0.140 rt_ms=9.517
+moist RISK_NOM|{"mbar": 0.35} ev_ontime=0.967 p95=2.254 cvar=0.078 e_comm=0.071 depl=0.000 routine=0.225 slack=0.079 rt_ms=9.711
+moist PAFS|{"mbar": 0.65} ev_ontime=0.062 p95=3.029 cvar=1.045 e_comm=0.287 depl=0.208 routine=nan slack=nan rt_ms=nan
+moist ERA|{"mbar": 0.65} ev_ontime=0.855 p95=1.642 cvar=0.336 e_comm=0.074 depl=0.007 routine=0.000 slack=nan rt_ms=nan
+moist EAMAC|{"mbar": 0.65} ev_ontime=0.582 p95=3.951 cvar=0.809 e_comm=0.078 depl=0.000 routine=0.084 slack=nan rt_ms=nan
+moist ETEV|{"mbar": 0.65} ev_ontime=0.993 p95=1.795 cvar=0.015 e_comm=0.047 depl=0.000 routine=0.179 slack=0.307 rt_ms=8.340
+moist RISK|{"mbar": 0.65} ev_ontime=0.991 p95=1.644 cvar=0.020 e_comm=0.057 depl=0.000 routine=0.169 slack=0.187 rt_ms=8.611
+moist RISK_NOM|{"mbar": 0.65} ev_ontime=0.991 p95=1.918 cvar=0.022 e_comm=0.057 depl=0.000 routine=0.162 slack=0.137 rt_ms=8.627
+moist PAFS|{"mbar": 0.8} ev_ontime=0.059 p95=2.915 cvar=1.063 e_comm=0.286 depl=0.208 routine=nan slack=nan rt_ms=nan
+moist ERA|{"mbar": 0.8} ev_ontime=0.847 p95=1.749 cvar=0.347 e_comm=0.076 depl=0.008 routine=0.000 slack=nan rt_ms=nan
+moist EAMAC|{"mbar": 0.8} ev_ontime=0.406 p95=3.981 cvar=0.933 e_comm=0.080 depl=0.000 routine=0.065 slack=nan rt_ms=nan
+moist ETEV|{"mbar": 0.8} ev_ontime=0.990 p95=1.845 cvar=0.022 e_comm=0.045 depl=0.000 routine=0.160 slack=0.344 rt_ms=8.367
+moist RISK|{"mbar": 0.8} ev_ontime=0.989 p95=1.729 cvar=0.025 e_comm=0.053 depl=0.000 routine=0.150 slack=0.219 rt_ms=8.589
+moist RISK_NOM|{"mbar": 0.8} ev_ontime=0.992 p95=1.929 cvar=0.020 e_comm=0.054 depl=0.000 routine=0.147 slack=0.184 rt_ms=8.668
+harv ERA|{"h_mult": 0.25} ev_ontime=0.737 p95=1.562 cvar=0.592 e_comm=0.061 depl=0.013 routine=0.000 slack=nan rt_ms=nan
+harv EAMAC|{"h_mult": 0.25} ev_ontime=0.744 p95=3.651 cvar=0.565 e_comm=0.054 depl=0.000 routine=0.054 slack=nan rt_ms=nan
+harv ETEV|{"h_mult": 0.25} ev_ontime=0.991 p95=1.771 cvar=0.021 e_comm=0.032 depl=0.000 routine=0.100 slack=0.308 rt_ms=7.950
+harv RISK|{"h_mult": 0.25} ev_ontime=0.991 p95=1.579 cvar=0.023 e_comm=0.038 depl=0.000 routine=0.086 slack=0.176 rt_ms=7.792
+harv ERA|{"h_mult": 1.0} ev_ontime=0.949 p95=1.374 cvar=0.120 e_comm=0.078 depl=0.003 routine=0.000 slack=nan rt_ms=nan
+harv EAMAC|{"h_mult": 1.0} ev_ontime=0.775 p95=3.681 cvar=0.496 e_comm=0.119 depl=0.000 routine=0.209 slack=nan rt_ms=nan
+harv ETEV|{"h_mult": 1.0} ev_ontime=0.993 p95=1.697 cvar=0.018 e_comm=0.078 depl=0.000 routine=0.345 slack=0.258 rt_ms=10.070
+harv RISK|{"h_mult": 1.0} ev_ontime=0.993 p95=1.534 cvar=0.018 e_comm=0.100 depl=0.000 routine=0.368 slack=0.164 rt_ms=11.029
+harv ERA|{"h_mult": 1.5} ev_ontime=0.967 p95=1.351 cvar=0.078 e_comm=0.080 depl=0.002 routine=0.000 slack=nan rt_ms=nan
+harv EAMAC|{"h_mult": 1.5} ev_ontime=0.783 p95=3.547 cvar=0.484 e_comm=0.158 depl=0.000 routine=0.294 slack=nan rt_ms=nan
+harv ETEV|{"h_mult": 1.5} ev_ontime=0.992 p95=1.639 cvar=0.020 e_comm=0.090 depl=0.000 routine=0.406 slack=0.254 rt_ms=10.592
+harv RISK|{"h_mult": 1.5} ev_ontime=0.992 p95=1.583 cvar=0.020 e_comm=0.122 depl=0.000 routine=0.463 slack=0.168 rt_ms=11.888
+harv ERA|{"h_mult": 2.0} ev_ontime=0.971 p95=1.379 cvar=0.068 e_comm=0.081 depl=0.002 routine=0.000 slack=nan rt_ms=nan
+harv EAMAC|{"h_mult": 2.0} ev_ontime=0.773 p95=3.559 cvar=0.504 e_comm=0.191 depl=0.000 routine=0.364 slack=nan rt_ms=nan
+harv ETEV|{"h_mult": 2.0} ev_ontime=0.993 p95=1.657 cvar=0.018 e_comm=0.095 depl=0.000 routine=0.430 slack=0.251 rt_ms=10.946
+harv RISK|{"h_mult": 2.0} ev_ontime=0.992 p95=1.544 cvar=0.019 e_comm=0.134 depl=0.000 routine=0.508 slack=0.167 rt_ms=12.385
+load ERA|{"lam0": 0.06} ev_ontime=0.963 p95=1.298 cvar=0.042 e_comm=0.038 depl=0.002 routine=0.000 slack=nan rt_ms=nan
+load EAMAC|{"lam0": 0.06} ev_ontime=0.774 p95=3.414 cvar=0.253 e_comm=0.066 depl=0.000 routine=0.118 slack=nan rt_ms=nan
+load ETEV|{"lam0": 0.06} ev_ontime=0.988 p95=1.569 cvar=0.013 e_comm=0.050 depl=0.000 routine=0.225 slack=0.324 rt_ms=8.648
+load RISK|{"lam0": 0.06} ev_ontime=0.990 p95=1.560 cvar=0.011 e_comm=0.059 depl=0.000 routine=0.221 slack=0.225 rt_ms=8.576
+load ERA|{"lam0": 0.24} ev_ontime=0.713 p95=2.004 cvar=0.884 e_comm=0.113 depl=0.021 routine=0.000 slack=nan rt_ms=nan
+load EAMAC|{"lam0": 0.24} ev_ontime=0.763 p95=3.793 cvar=0.799 e_comm=0.092 depl=0.000 routine=0.088 slack=nan rt_ms=nan
+load ETEV|{"lam0": 0.24} ev_ontime=0.991 p95=1.734 cvar=0.038 e_comm=0.056 depl=0.000 routine=0.187 slack=0.257 rt_ms=9.531
+load RISK|{"lam0": 0.24} ev_ontime=0.990 p95=1.615 cvar=0.043 e_comm=0.068 depl=0.000 routine=0.170 slack=0.158 rt_ms=9.985
+load ERA|{"lam0": 0.48} ev_ontime=0.559 p95=3.203 cvar=1.192 e_comm=0.177 depl=0.052 routine=0.000 slack=nan rt_ms=nan
+load EAMAC|{"lam0": 0.48} ev_ontime=0.741 p95=4.048 cvar=1.033 e_comm=0.123 depl=0.001 routine=0.063 slack=nan rt_ms=nan
+load ETEV|{"lam0": 0.48} ev_ontime=0.981 p95=1.909 cvar=0.136 e_comm=0.064 depl=0.000 routine=0.145 slack=0.282 rt_ms=10.943
+load RISK|{"lam0": 0.48} ev_ontime=0.930 p95=1.747 cvar=0.451 e_comm=0.078 depl=0.000 routine=0.121 slack=0.306 rt_ms=11.867
+pareto RISK|{"lam": 0.0} ev_ontime=0.992 p95=1.735 cvar=0.019 e_comm=0.052 depl=0.000 routine=0.210 slack=0.186 rt_ms=8.908
+pareto RISK|{"lam": 0.5} ev_ontime=0.993 p95=1.598 cvar=0.018 e_comm=0.058 depl=0.000 routine=0.204 slack=0.175 rt_ms=9.222
+pareto RISK|{"lam": 1.0} ev_ontime=0.993 p95=1.593 cvar=0.018 e_comm=0.062 depl=0.000 routine=0.199 slack=0.164 rt_ms=9.363
+pareto RISK|{"lam": 2.0} ev_ontime=0.994 p95=1.559 cvar=0.015 e_comm=0.066 depl=0.000 routine=0.196 slack=0.171 rt_ms=8.874
+pareto RISK|{"lam": 4.0} ev_ontime=0.991 p95=1.561 cvar=0.021 e_comm=0.069 depl=0.000 routine=0.192 slack=0.176 rt_ms=9.706
+pareto TDMA|{"R_tdma": 2} ev_ontime=0.015 p95=1.575 cvar=1.067 e_comm=0.216 depl=0.123 routine=nan slack=nan rt_ms=nan
+pareto TDMA|{"R_tdma": 3} ev_ontime=0.023 p95=2.192 cvar=1.064 e_comm=0.210 depl=0.106 routine=nan slack=nan rt_ms=nan
+pareto TDMA|{"R_tdma": 5} ev_ontime=0.035 p95=2.566 cvar=1.059 e_comm=0.186 depl=0.086 routine=nan slack=nan rt_ms=nan
+pareto TDMA|{"R_tdma": 10} ev_ontime=0.042 p95=2.426 cvar=1.054 e_comm=0.150 depl=0.059 routine=nan slack=nan rt_ms=nan
+pareto PAFS|{"R_tdma": 2} ev_ontime=0.020 p95=2.948 cvar=1.067 e_comm=0.287 depl=0.214 routine=nan slack=nan rt_ms=nan
+pareto PAFS|{"R_tdma": 3} ev_ontime=0.065 p95=2.757 cvar=1.058 e_comm=0.287 depl=0.208 routine=nan slack=nan rt_ms=nan
+pareto PAFS|{"R_tdma": 5} ev_ontime=0.102 p95=2.974 cvar=1.042 e_comm=0.279 depl=0.183 routine=nan slack=nan rt_ms=nan
+pareto PAFS|{"R_tdma": 10} ev_ontime=0.167 p95=3.352 cvar=1.017 e_comm=0.249 depl=0.126 routine=nan slack=nan rt_ms=nan
+pareto ERA|{"q_ra": 0.1} ev_ontime=0.885 p95=2.579 cvar=0.266 e_comm=0.059 depl=0.004 routine=0.000 slack=nan rt_ms=nan
+pareto ERA|{"q_ra": 0.25} ev_ontime=0.880 p95=1.518 cvar=0.280 e_comm=0.070 depl=0.007 routine=0.000 slack=nan rt_ms=nan
+pareto ERA|{"q_ra": 0.5} ev_ontime=0.877 p95=1.157 cvar=0.282 e_comm=0.076 depl=0.007 routine=0.000 slack=nan rt_ms=nan
+pareto ETEV|{} ev_ontime=0.992 p95=1.708 cvar=0.020 e_comm=0.052 depl=0.000 routine=0.211 slack=0.280 rt_ms=8.949
+pareto EAMAC|{} ev_ontime=0.768 p95=3.476 cvar=0.511 e_comm=0.075 depl=0.000 routine=0.106 slack=nan rt_ms=nan
+stress PAFS|{"stress": "burst_rain"} ev_ontime=0.075 p95=3.419 cvar=1.136 e_comm=0.287 depl=0.207 routine=nan slack=nan rt_ms=nan
+stress ERA|{"stress": "burst_rain"} ev_ontime=0.805 p95=1.764 cvar=0.565 e_comm=0.088 depl=0.012 routine=0.000 slack=nan rt_ms=nan
+stress EAMAC|{"stress": "burst_rain"} ev_ontime=0.615 p95=3.826 cvar=0.894 e_comm=0.082 depl=0.000 routine=0.085 slack=nan rt_ms=nan
+stress ETEV|{"stress": "burst_rain"} ev_ontime=0.987 p95=1.843 cvar=0.038 e_comm=0.051 depl=0.000 routine=0.180 slack=0.312 rt_ms=9.434
+stress RISK|{"stress": "burst_rain"} ev_ontime=0.988 p95=1.652 cvar=0.033 e_comm=0.061 depl=0.000 routine=0.168 slack=0.199 rt_ms=8.997
+stress PAFS|{"stress": "zero_harvest"} ev_ontime=0.073 p95=3.135 cvar=1.054 e_comm=0.259 depl=0.287 routine=nan slack=nan rt_ms=nan
+stress ERA|{"stress": "zero_harvest"} ev_ontime=0.802 p95=1.597 cvar=0.455 e_comm=0.067 depl=0.020 routine=0.000 slack=nan rt_ms=nan
+stress EAMAC|{"stress": "zero_harvest"} ev_ontime=0.748 p95=3.531 cvar=0.556 e_comm=0.071 depl=0.005 routine=0.093 slack=nan rt_ms=nan
+stress ETEV|{"stress": "zero_harvest"} ev_ontime=0.986 p95=1.796 cvar=0.032 e_comm=0.047 depl=0.000 routine=0.182 slack=0.306 rt_ms=8.486
+stress RISK|{"stress": "zero_harvest"} ev_ontime=0.953 p95=1.636 cvar=0.106 e_comm=0.055 depl=0.000 routine=0.170 slack=0.267 rt_ms=8.595
+stress PAFS|{"stress": "sink_loss"} ev_ontime=0.051 p95=2.465 cvar=1.057 e_comm=0.290 depl=0.209 routine=nan slack=nan rt_ms=nan
+stress ERA|{"stress": "sink_loss"} ev_ontime=0.766 p95=2.135 cvar=0.533 e_comm=0.078 depl=0.009 routine=0.000 slack=nan rt_ms=nan
+stress EAMAC|{"stress": "sink_loss"} ev_ontime=0.655 p95=3.662 cvar=0.726 e_comm=0.075 depl=0.000 routine=0.079 slack=nan rt_ms=nan
+stress ETEV|{"stress": "sink_loss"} ev_ontime=0.978 p95=2.511 cvar=0.052 e_comm=0.046 depl=0.000 routine=0.149 slack=0.513 rt_ms=8.542
+stress RISK|{"stress": "sink_loss"} ev_ontime=0.986 p95=2.465 cvar=0.032 e_comm=0.056 depl=0.000 routine=0.139 slack=0.417 rt_ms=8.857
+sens ETEV|{"sig_w": 0.0} ev_ontime=0.992 p95=1.717 cvar=0.020 e_comm=0.052 depl=0.000 routine=0.211 slack=0.294 rt_ms=8.663
+sens RISK|{"sig_w": 0.0} ev_ontime=0.993 p95=1.547 cvar=0.018 e_comm=0.062 depl=0.000 routine=0.200 slack=0.174 rt_ms=8.890
+sens ETEV|{"sig_w": 0.2} ev_ontime=0.992 p95=1.708 cvar=0.019 e_comm=0.052 depl=0.000 routine=0.211 slack=0.261 rt_ms=8.546
+sens RISK|{"sig_w": 0.2} ev_ontime=0.991 p95=1.541 cvar=0.023 e_comm=0.062 depl=0.000 routine=0.199 slack=0.173 rt_ms=8.922
+sens ETEV|{"sig_w": 0.3} ev_ontime=0.992 p95=1.726 cvar=0.019 e_comm=0.052 depl=0.000 routine=0.212 slack=0.257 rt_ms=8.598
+sens RISK|{"sig_w": 0.3} ev_ontime=0.993 p95=1.579 cvar=0.017 e_comm=0.062 depl=0.000 routine=0.199 slack=0.164 rt_ms=8.808
+sens RISK|{"alpha": 0.8} ev_ontime=0.993 p95=1.569 cvar=0.017 e_comm=0.062 depl=0.000 routine=0.202 slack=0.167 rt_ms=8.837
+sens RISK|{"alpha": 0.95} ev_ontime=0.993 p95=1.597 cvar=0.017 e_comm=0.062 depl=0.000 routine=0.199 slack=0.172 rt_ms=9.795
+sens RISK|{"n_scen": 16} ev_ontime=0.993 p95=1.618 cvar=0.017 e_comm=0.062 depl=0.000 routine=0.203 slack=0.150 rt_ms=5.759
+sens RISK|{"n_scen": 96} ev_ontime=0.992 p95=1.638 cvar=0.020 e_comm=0.063 depl=0.000 routine=0.199 slack=0.174 rt_ms=13.952
+== Gap: n=60 optimal=0.933 mean=0.0090 p95=0.0502 max=0.1799
+== Runtime scaling {'40': {'rt': 3.605539164997026, 'rt95': 6.984394479986799, 'ont': 0.8738086944983496}, '80': {'rt': 6.436445645027561, 'rt95': 13.726339900094882, 'ont': 0.9770531400966185}, '120': {'rt': 10.123688992976895, 'rt95': 21.21068892934999, 'ont': 0.9925925925925926}, '200': {'rt': 18.2278177730077, 'rt95': 33.68030466006529, 'ont': 0.9916666666666668}, '300': {'rt': 32.19780845004243, 'rt95': 54.03053578002069, 'ont': 1.0}}

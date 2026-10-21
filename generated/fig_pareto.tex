@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+\begin{axis}[width=\columnwidth,height=5.0cm,grid=major,grid style={gray!25},tick label style={font=\scriptsize},label style={font=\footnotesize},legend style={font=\tiny,at={(0.5,1.03)},anchor=south,legend columns=3,draw=none},height=5.2cm,xlabel={Communication energy (EU per node and epoch)},ylabel={On-time event delivery},xmin=0.03,xmax=0.31,scaled x ticks=false,xticklabel style={/pgf/number format/fixed},ymin=0,ymax=1.02]
+\addplot+[color=black,mark=+,error bars/.cd,y dir=both,y explicit] coordinates {(0.1498,0.0420) +- (0,0.0125) (0.1857,0.0348) +- (0,0.0116) (0.2096,0.0231) +- (0,0.0121) (0.2160,0.0145) +- (0,0.0085)};
+\addlegendentry{TDMA}
+\addplot+[color=gray,mark=diamond*,error bars/.cd,y dir=both,y explicit] coordinates {(0.2489,0.1666) +- (0,0.0287) (0.2792,0.1016) +- (0,0.0213) (0.2873,0.0653) +- (0,0.0156) (0.2874,0.0195) +- (0,0.0063)};
+\addlegendentry{PA-FS}
+\addplot+[color=blue!70!black,mark=square*,error bars/.cd,y dir=both,y explicit] coordinates {(0.0594,0.8852) +- (0,0.0187) (0.0703,0.8797) +- (0,0.0214) (0.0758,0.8766) +- (0,0.0212)};
+\addlegendentry{E-RA}
+\addplot+[color=green!50!black,mark=triangle*,only marks,error bars/.cd,y dir=both,y explicit] coordinates {(0.0749,0.7680) +- (0,0.0323)};
+\addlegendentry{EA-MAC}
+\addplot+[color=violet,mark=o,dashed,only marks,error bars/.cd,y dir=both,y explicit] coordinates {(0.0519,0.9918) +- (0,0.0064)};
+\addlegendentry{ET-EV}
+\addplot+[color=orange!85!black,mark=*,thick,error bars/.cd,y dir=both,y explicit] coordinates {(0.0524,0.9922) +- (0,0.0064) (0.0584,0.9927) +- (0,0.0062) (0.0622,0.9927) +- (0,0.0062) (0.0662,0.9942) +- (0,0.0059) (0.0694,0.9913) +- (0,0.0071)};
+\addlegendentry{PlantMONT-Risk}
+\end{axis}
+\end{tikzpicture}

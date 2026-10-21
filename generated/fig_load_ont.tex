@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+\begin{axis}[width=\columnwidth,height=5.0cm,grid=major,grid style={gray!25},tick label style={font=\scriptsize},label style={font=\footnotesize},legend style={font=\tiny,at={(0.5,1.03)},anchor=south,legend columns=3,draw=none},xlabel={Burst rate $\lambda_0$ (per epoch)},ylabel={On-time event delivery},ymin=0.4,ymax=1.05,xmode=log,log basis x=2,xtick={0.06,0.12,0.24,0.48},xticklabels={0.06,0.12,0.24,0.48}]
+\addplot+[color=blue!70!black,mark=square*,error bars/.cd,y dir=both,y explicit] coordinates {(0.06,0.9630) +- (0,0.0148) (0.12,0.8797) +- (0,0.0214) (0.24,0.7126) +- (0,0.0182) (0.48,0.5588) +- (0,0.0191)};
+\addlegendentry{E-RA}
+\addplot+[color=green!50!black,mark=triangle*,error bars/.cd,y dir=both,y explicit] coordinates {(0.06,0.7744) +- (0,0.0362) (0.12,0.7680) +- (0,0.0323) (0.24,0.7635) +- (0,0.0316) (0.48,0.7408) +- (0,0.0261)};
+\addlegendentry{EA-MAC}
+\addplot+[color=violet,mark=o,dashed,error bars/.cd,y dir=both,y explicit] coordinates {(0.06,0.9880) +- (0,0.0084) (0.12,0.9918) +- (0,0.0064) (0.24,0.9908) +- (0,0.0048) (0.48,0.9812) +- (0,0.0089)};
+\addlegendentry{ET-EV}
+\addplot+[color=orange!85!black,mark=*,thick,error bars/.cd,y dir=both,y explicit] coordinates {(0.06,0.9902) +- (0,0.0081) (0.12,0.9927) +- (0,0.0062) (0.24,0.9897) +- (0,0.0050) (0.48,0.9302) +- (0,0.0249)};
+\addlegendentry{PlantMONT-Risk}
+\end{axis}
+\end{tikzpicture}

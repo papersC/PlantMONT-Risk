@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+\begin{axis}[width=\columnwidth,height=5.0cm,grid=major,grid style={gray!25},tick label style={font=\scriptsize},label style={font=\footnotesize},legend style={font=\tiny,at={(0.5,1.03)},anchor=south,legend columns=3,draw=none},xlabel={Harvest when on (EU per epoch)},ylabel={CVaR$_{0.95}$ of missed-event loss},ymin=0]
+\addplot+[color=blue!70!black,mark=square*,error bars/.cd,y dir=both,y explicit] coordinates {(0.25,0.5917) +- (0,0.0636) (0.5,0.2798) +- (0,0.0564) (1,0.1196) +- (0,0.0289) (1.5,0.0777) +- (0,0.0245) (2,0.0680) +- (0,0.0241)};
+\addlegendentry{E-RA}
+\addplot+[color=green!50!black,mark=triangle*,error bars/.cd,y dir=both,y explicit] coordinates {(0.25,0.5645) +- (0,0.0719) (0.5,0.5105) +- (0,0.0690) (1,0.4962) +- (0,0.0636) (1.5,0.4837) +- (0,0.0671) (2,0.5038) +- (0,0.0631)};
+\addlegendentry{EA-MAC}
+\addplot+[color=violet,mark=o,dashed,error bars/.cd,y dir=both,y explicit] coordinates {(0.25,0.0209) +- (0,0.0178) (0.5,0.0199) +- (0,0.0176) (1,0.0179) +- (0,0.0174) (1.5,0.0200) +- (0,0.0176) (2,0.0177) +- (0,0.0177)};
+\addlegendentry{ET-EV}
+\addplot+[color=orange!85!black,mark=*,thick,error bars/.cd,y dir=both,y explicit] coordinates {(0.25,0.0226) +- (0,0.0198) (0.5,0.0179) +- (0,0.0174) (1,0.0179) +- (0,0.0174) (1.5,0.0198) +- (0,0.0174) (2,0.0189) +- (0,0.0194)};
+\addlegendentry{PlantMONT-Risk}
+\end{axis}
+\end{tikzpicture}
